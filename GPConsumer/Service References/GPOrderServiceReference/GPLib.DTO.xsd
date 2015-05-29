@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/GPLib.DTO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GPLib.DTO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="OrderDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedDt" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeliveredDt" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DeliveryAdress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeliveryDriverId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DeliveryDriverName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GoodsList" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsDeleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastUpdated" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Latitude" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Longtitude" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="OrderId" type="xs:int" />
+      <xs:element minOccurs="0" name="OrderStatusId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="OrderStatusName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalCost" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UpdateDt" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrderDTO" nillable="true" type="tns:OrderDTO" />
+  <xs:complexType name="ArrayOfOrderDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrderDTO" nillable="true" type="tns:OrderDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOrderDTO" nillable="true" type="tns:ArrayOfOrderDTO" />
+  <xs:complexType name="ArrayOfDriverCurrentLocationDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DriverCurrentLocationDTO" nillable="true" type="tns:DriverCurrentLocationDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDriverCurrentLocationDTO" nillable="true" type="tns:ArrayOfDriverCurrentLocationDTO" />
+  <xs:complexType name="DriverCurrentLocationDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DriverId" type="xs:int" />
+      <xs:element minOccurs="0" name="DriverName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastUpdated" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Latitude" type="xs:double" />
+      <xs:element minOccurs="0" name="Longtitude" type="xs:double" />
+      <xs:element minOccurs="0" name="VehicleTime" type="ser:duration" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DriverCurrentLocationDTO" nillable="true" type="tns:DriverCurrentLocationDTO" />
+  <xs:complexType name="CurrentLocationDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LastUpdated" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Latitude" type="xs:double" />
+      <xs:element minOccurs="0" name="LocationId" type="xs:int" />
+      <xs:element minOccurs="0" name="Longtitude" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CurrentLocationDTO" nillable="true" type="tns:CurrentLocationDTO" />
+  <xs:complexType name="ArrayOfOrderStatusDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrderStatusDTO" nillable="true" type="tns:OrderStatusDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOrderStatusDTO" nillable="true" type="tns:ArrayOfOrderStatusDTO" />
+  <xs:complexType name="OrderStatusDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OrderStatusId" type="xs:int" />
+      <xs:element minOccurs="0" name="OrderStatusName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrderStatusDTO" nillable="true" type="tns:OrderStatusDTO" />
+  <xs:complexType name="DriverDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DriverId" type="xs:int" />
+      <xs:element minOccurs="0" name="DriverName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsDeleted" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LicenceNum" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Notes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PassportGivenBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PassportGivenDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PassportGivenDivision" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PassportNum" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PassportSeries" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhoneNum" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DriverDTO" nillable="true" type="tns:DriverDTO" />
+  <xs:complexType name="ArrayOfDriverDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DriverDTO" nillable="true" type="tns:DriverDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDriverDTO" nillable="true" type="tns:ArrayOfDriverDTO" />
+  <xs:complexType name="ArrayOfVehicleDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VehicleDTO" nillable="true" type="tns:VehicleDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVehicleDTO" nillable="true" type="tns:ArrayOfVehicleDTO" />
+  <xs:complexType name="VehicleDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Brand" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Capacity" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DriverId" type="xs:int" />
+      <xs:element minOccurs="0" name="Height" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Lenght" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="LicencePlate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VehicleId" type="xs:int" />
+      <xs:element minOccurs="0" name="VehicleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Width" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VehicleDTO" nillable="true" type="tns:VehicleDTO" />
+  <xs:complexType name="ArrayOfOrderStatDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrderStatDTO" nillable="true" type="tns:OrderStatDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOrderStatDTO" nillable="true" type="tns:ArrayOfOrderStatDTO" />
+  <xs:complexType name="OrderStatDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OrderId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="descr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dt" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrderStatDTO" nillable="true" type="tns:OrderStatDTO" />
+  <xs:complexType name="ArrayOfDriverStatisticsDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DriverStatisticsDTO" nillable="true" type="tns:DriverStatisticsDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDriverStatisticsDTO" nillable="true" type="tns:ArrayOfDriverStatisticsDTO" />
+  <xs:complexType name="DriverStatisticsDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Bearing" type="xs:double" />
+      <xs:element minOccurs="0" name="Distance" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="DriverId" type="xs:int" />
+      <xs:element minOccurs="0" name="LastUpdated" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Latitude" type="xs:double" />
+      <xs:element minOccurs="0" name="Longtitude" type="xs:double" />
+      <xs:element minOccurs="0" name="RowId" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DriverStatisticsDTO" nillable="true" type="tns:DriverStatisticsDTO" />
+</xs:schema>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GPLib.DTO.CurrentLocationDTO">
+    <Position X="8" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAQIAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DTO\CurrentLocationDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPLib.DTO.DriverCurrentLocationDTO">
+    <Position X="3.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAQIAAEAAAAAAAAIAAAAAAAQAAA=</HashCode>
+      <FileName>DTO\DriverCurrentLocationDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPLib.DTO.DriverDTO">
+    <Position X="6.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAgAgEAgCAAABEABAAABAAAAAAAAAAIAAAAAQAAAAA=</HashCode>
+      <FileName>DTO\DriverDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPLib.DTO.DriverStatisticsDTO">
+    <Position X="6.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAABAAAAQIAAEAAAAAAABAAAAAAAAAABA=</HashCode>
+      <FileName>DTO\DriverStatisticsDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPLib.DTO.OrderDTO">
+    <Position X="1.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAgAAEAIAAAAIJAAQIAAUAQAQIIAAAAACAIQAACAA=</HashCode>
+      <FileName>DTO\OrderDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPLib.DTO.OrderStatDTO">
+    <Position X="8" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAQAAAAAAAA=</HashCode>
+      <FileName>DTO\OrderStatDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPLib.DTO.OrderStatistics">
+    <Position X="4.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAQAAAAAAAA=</HashCode>
+      <FileName>DTO\OrderStatistics.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPLib.DTO.OrderStatusDTO">
+    <Position X="3.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DTO\OrderStatusDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPLib.DTO.VehicleDTO">
+    <Position X="4.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAABAQAABAAAAAAAEACAAAAgEAAAAAAAAABAAA=</HashCode>
+      <FileName>DTO\VehicleDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GPServices.GPDriver" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GPDriver.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GPServices.GPEntities" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hAEAAAAQAgADgAABAAAAAAAIEAQIAAwAAAgAAAAAAAA=</HashCode>
+      <FileName>GPEntities.Context.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPServices.CurrentLocation" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAQIAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CurrentLocation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPServices.DistanceBearing_Result" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>DistanceBearing_Result.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPServices.Driver" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAEgAgEAgCAAgBEBBAAAFAEAAAAAAAAIAAAAAQAAAAE=</HashCode>
+      <FileName>Driver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPServices.DriverCurrentLocation" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAQIAAEAAAAAgAAAAAAAAAAQAAA=</HashCode>
+      <FileName>DriverCurrentLocation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPServices.DriverLocation" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAQIEAEAAAAAgAAAAAAAAQAAABA=</HashCode>
+      <FileName>DriverLocation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPServices.DriverTrackList_Get_Result" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAABAAAAQIAAEAAAAAAABAAAAAAAAAABA=</HashCode>
+      <FileName>DriverTrackList_Get_Result.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPServices.DriverTrackList_Get_Result1" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAABAAAAQIAAEAAAAAAABAAAAAAAAAABA=</HashCode>
+      <FileName>DriverTrackList_Get_Result1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPServices.DriverTrackList_Get2_Result" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAABAAAAQIAAEAAAAAAABAAAAAAAAAABA=</HashCode>
+      <FileName>DriverTrackList_Get2_Result.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPServices.DriverTrackList_Get21_Result" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAQIAAEAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>DriverTrackList_Get21_Result.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPServices.DriverTrackList_Get3_Result" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAACAA=</HashCode>
+      <FileName>DriverTrackList_Get3_Result.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPServices.DriverTrackList_Get3_Result1" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAACAA=</HashCode>
+      <FileName>DriverTrackList_Get3_Result1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPServices.DriverTrackList_Get3_Result2" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAACAA=</HashCode>
+      <FileName>DriverTrackList_Get3_Result2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPServices.DriverTrackList_Get3_Result3" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAACAA=</HashCode>
+      <FileName>DriverTrackList_Get3_Result3.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPServices.DriverTrackList_Get3_Result4" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAACAA=</HashCode>
+      <FileName>DriverTrackList_Get3_Result4.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPServices.DriverTrackList_Get31_Result" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAACAA=</HashCode>
+      <FileName>DriverTrackList_Get31_Result.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPServices.GPUser" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAkAAAAAAAgAAQAAAQIAAgA=</HashCode>
+      <FileName>GPUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPServices.Order" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kAAAgAAEAIABAAAJBAQIEAEAQAQIoAAAAAAAIQAACAA=</HashCode>
+      <FileName>Order.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPServices.OrderCourierChanx" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAEAAAAAAAAABAAAAAAAEAEAAAAAgAAAAAAAAAAACAA=</HashCode>
+      <FileName>OrderCourierChanx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPServices.OrderStatistics_Get_Result" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAQAAAAAAAA=</HashCode>
+      <FileName>OrderStatistics_Get_Result.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPServices.OrderStatistics_Get1_Result" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAQAAAAAAAA=</HashCode>
+      <FileName>OrderStatistics_Get1_Result.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPServices.OrderStatistics_Get2_Result" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAQAAAAAAAA=</HashCode>
+      <FileName>OrderStatistics_Get2_Result.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPServices.OrderStatu" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAABAAIAAAAAAAAQAAAIAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>OrderStatu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPServices.OrderStatusChanx" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAEAAAAAAAAgAAAABAAAEAEAAAAIAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>OrderStatusChanx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPServices.UserRole" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAEAAAAAAAQAAAAAEQAAAAA=</HashCode>
+      <FileName>UserRole.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPServices.Vehicle" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAABAAAABAAAAAAEEFCAAAAgAAAAAAAAQABAAA=</HashCode>
+      <FileName>Vehicle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPServices.OrdersService.GPOrder" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEGgAgwgCAgSIEAgAIADKgIAAAgIABghARCIBAEAg=</HashCode>
+      <FileName>OrdersService\GPOrder.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GPServices.Security.GPServiceValidator" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAACAAAAAAAAIAAAAAgAAAABAAAAAAAAA=</HashCode>
+      <FileName>Security\GPServiceValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="GPServices.IGPDriver" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IGPDriver.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GPServices.OrdersService.IGPOrder">
+    <Position X="2.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACgAgwgCAAQIEAgAIADCgAAAAAIABggARCIAAAAg=</HashCode>
+      <FileName>OrdersService\IGPOrder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

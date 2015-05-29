@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/GPLib.DTO" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:element name="AddOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="orderId" type="xs:int" />
+        <xs:element minOccurs="0" name="createdDt" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="deliveryAdress" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="latitude" type="xs:double" />
+        <xs:element minOccurs="0" name="longtitude" type="xs:double" />
+        <xs:element minOccurs="0" name="city" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="comment" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="customerName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="goodsList" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="phone" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="totalCost" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/GPLib.DTO" minOccurs="0" name="AddOrderResult" nillable="true" type="q1:OrderDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllOrders">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllOrdersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/GPLib.DTO" minOccurs="0" name="GetAllOrdersResult" nillable="true" type="q2:ArrayOfOrderDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrentLocations">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrentLocationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/GPLib.DTO" minOccurs="0" name="GetCurrentLocationsResult" nillable="true" type="q3:ArrayOfDriverCurrentLocationDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrentLocation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="locationId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrentLocationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/GPLib.DTO" minOccurs="0" name="GetCurrentLocationResult" nillable="true" type="q4:CurrentLocationDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetCurrentLocation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="locationId" type="xs:int" />
+        <xs:element minOccurs="0" name="latitude" type="xs:double" />
+        <xs:element minOccurs="0" name="longtitude" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetCurrentLocationResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewOrders">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewOrdersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/GPLib.DTO" minOccurs="0" name="GetNewOrdersResult" nillable="true" type="q5:ArrayOfOrderDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDriverLocation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vehicleId" type="xs:int" />
+        <xs:element minOccurs="0" name="lat" type="xs:double" />
+        <xs:element minOccurs="0" name="lng" type="xs:double" />
+        <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="time" type="q6:duration" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDriverLocationResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderStatusesList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderStatusesListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/GPLib.DTO" minOccurs="0" name="GetOrderStatusesListResult" nillable="true" type="q7:ArrayOfOrderStatusDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetOrderDeliveryDriverId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="orderId" type="xs:int" />
+        <xs:element minOccurs="0" name="deliveryDriverId" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetOrderDeliveryDriverIdResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateOrderStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="orderId" type="xs:int" />
+        <xs:element minOccurs="0" name="statusId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateOrderStatusResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrentLocationsByDriverIdDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="driverId" type="xs:int" />
+        <xs:element minOccurs="0" name="date" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrentLocationsByDriverIdDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/GPLib.DTO" minOccurs="0" name="GetCurrentLocationsByDriverIdDateResult" nillable="true" type="q8:ArrayOfDriverCurrentLocationDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateOrderStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateOrderStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateOrderStatusResult" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteOrderStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="orderStatusId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteOrderStatusResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddDriver">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="driverName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="licenceNum" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="notes" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="passportGivenBy" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="passportGivenDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="passportGivenDivision" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="passportNum" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="passportSeries" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="phoneNum" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddDriverResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/GPLib.DTO" minOccurs="0" name="AddDriverResult" nillable="true" type="q9:DriverDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllDrivers">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllDriversResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/GPLib.DTO" minOccurs="0" name="GetAllDriversResult" nillable="true" type="q10:ArrayOfDriverDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDriver">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="driverId" type="xs:int" />
+        <xs:element minOccurs="0" name="driverName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="licenceNum" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="notes" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="passportGivenBy" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="passportGivenDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="passportGivenDivision" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="passportNum" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="passportSeries" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="phoneNum" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDriverResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/GPLib.DTO" minOccurs="0" name="UpdateDriverResult" nillable="true" type="q11:DriverDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteDriver">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="driverId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteDriverResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewDrivers">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewDriversResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/GPLib.DTO" minOccurs="0" name="GetNewDriversResult" nillable="true" type="q12:ArrayOfDriverDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllVehicles">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllVehiclesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/GPLib.DTO" minOccurs="0" name="GetAllVehiclesResult" nillable="true" type="q13:ArrayOfVehicleDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddVehicle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="driverId" type="xs:int" />
+        <xs:element minOccurs="0" name="brand" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="licencePlate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="length" type="xs:decimal" />
+        <xs:element minOccurs="0" name="width" type="xs:decimal" />
+        <xs:element minOccurs="0" name="height" type="xs:decimal" />
+        <xs:element minOccurs="0" name="capacity" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddVehicleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/GPLib.DTO" minOccurs="0" name="AddVehicleResult" nillable="true" type="q14:VehicleDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteVehicle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vehicleId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteVehicleResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewVehicles">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewVehiclesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/GPLib.DTO" minOccurs="0" name="GetNewVehiclesResult" nillable="true" type="q15:ArrayOfVehicleDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderStatistics">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="order_id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderStatisticsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/GPLib.DTO" minOccurs="0" name="GetOrderStatisticsResult" nillable="true" type="q16:ArrayOfOrderStatDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDriverStatisticsHistory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dt" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="radius" type="xs:int" />
+        <xs:element minOccurs="0" name="driverId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDriverStatisticsHistoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/GPLib.DTO" minOccurs="0" name="GetDriverStatisticsHistoryResult" nillable="true" type="q17:ArrayOfDriverStatisticsDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Login">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LoginResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Test">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TestResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

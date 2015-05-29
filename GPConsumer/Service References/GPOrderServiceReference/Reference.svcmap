@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="06f93c94-1bf8-47f2-8782-c42ec1de8781" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/GPServices.OrdersService/GPOrder/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="d20c6383-9cf5-4e46-9a70-6a028bb3af7b" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/GPServices.OrdersService/GPOrder/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="1af9e61d-7ebb-4d7a-8966-0806d064c716" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/GPServices.OrdersService/GPOrder/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="ec4f98fd-9276-405b-84da-d4373be874cf" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/GPServices.OrdersService/GPOrder/mex" />
+    <MetadataFile FileName="GPLib.DTO.xsd" MetadataType="Schema" ID="e438ba73-cfa6-423b-a09b-49c8278954d2" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/GPServices.OrdersService/GPOrder/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

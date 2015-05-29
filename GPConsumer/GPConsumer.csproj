@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6F760A17-B50A-41F2-A923-D7F867970700}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GPConsumer</RootNamespace>
+    <AssemblyName>GPConsumer</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GMap.NET.Core">
+      <HintPath>D:\Рабочий стол\Диплом\Софт\GMap.NET Build-3e2a9ced173d-20150401\Release-NETv4.0\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms, Version=1.7.0.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Рабочий стол\Диплом\Софт\GMap.NET Build-3e2a9ced173d-20150401\Release-NETv4.0\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Device" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Events\Delegates.cs" />
+    <Compile Include="Events\DriverDeletedEventArgs.cs" />
+    <Compile Include="Events\DriverCreatedEventArgs.cs" />
+    <Compile Include="Events\StatusCreatedEventArgs.cs.cs" />
+    <Compile Include="Events\VehicleCreatedEventArgs.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherForms\AddingStatusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherForms\AddingStatusForm.Designer.cs">
+      <DependentUpon>AddingStatusForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherForms\DriverPropertiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherForms\DriverPropertiesForm.Designer.cs">
+      <DependentUpon>DriverPropertiesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherForms\DriversForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherForms\DriversForm.Designer.cs">
+      <DependentUpon>DriversForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherForms\DriverTrackForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherForms\DriverTrackForm.Designer.cs">
+      <DependentUpon>DriverTrackForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherForms\DriverVehiclesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherForms\DriverVehiclesForm.Designer.cs">
+      <DependentUpon>DriverVehiclesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherForms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherForms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherForms\OrderPropertiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherForms\OrderPropertiesForm.Designer.cs">
+      <DependentUpon>OrderPropertiesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherForms\OrderStatisticFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherForms\OrderStatisticFrom.Designer.cs">
+      <DependentUpon>OrderStatisticFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherForms\OrderStatusesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherForms\OrderStatusesForm.Designer.cs">
+      <DependentUpon>OrderStatusesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherForms\SetInitialCoordinatesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherForms\SetInitialCoordinatesForm.Designer.cs">
+      <DependentUpon>SetInitialCoordinatesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherForms\SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherForms\SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherForms\StatisticsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherForms\StatisticsForm.Designer.cs">
+      <DependentUpon>StatisticsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherForms\VehiclePropertiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherForms\VehiclePropertiesForm.Designer.cs">
+      <DependentUpon>VehiclePropertiesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\GPOrderServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\DictionaryHelper.cs" />
+    <Compile Include="Utility\ExceptionLogger.cs" />
+    <Compile Include="Utility\DriverHelper.cs" />
+    <Compile Include="Utility\GeoHelper.cs" />
+    <Compile Include="Utility\GMarkerArrow.cs" />
+    <Compile Include="Utility\GPTag.cs" />
+    <Compile Include="Utility\MapHelper.cs" />
+    <Compile Include="Utility\MapSettings.cs" />
+    <Compile Include="Utility\OrderHelper.cs" />
+    <Compile Include="Utility\SecurityHelper.cs" />
+    <Compile Include="Utility\StatHelper.cs" />
+    <Compile Include="Utility\VehicleHelper.cs" />
+    <Compile Include="Utility\VehicleLocationHelper.cs" />
+    <Compile Include="Utility\VilnusTransportDemo.cs" />
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherForms\AddingStatusForm.resx">
+      <DependentUpon>AddingStatusForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherForms\DriverPropertiesForm.resx">
+      <DependentUpon>DriverPropertiesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherForms\DriversForm.resx">
+      <DependentUpon>DriversForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherForms\DriverTrackForm.resx">
+      <DependentUpon>DriverTrackForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherForms\DriverVehiclesForm.resx">
+      <DependentUpon>DriverVehiclesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherForms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherForms\OrderPropertiesForm.resx">
+      <DependentUpon>OrderPropertiesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherForms\OrderStatisticFrom.resx">
+      <DependentUpon>OrderStatisticFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherForms\OrderStatusesForm.resx">
+      <DependentUpon>OrderStatusesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherForms\SetInitialCoordinatesForm.resx">
+      <DependentUpon>SetInitialCoordinatesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherForms\SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherForms\StatisticsForm.resx">
+      <DependentUpon>StatisticsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherForms\VehiclePropertiesForm.resx">
+      <DependentUpon>VehiclePropertiesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\GPOrderServiceReference\GPConsumer.GPOrderServiceReference.CurrentLocationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GPOrderServiceReference\GPConsumer.GPOrderServiceReference.DriverCurrentLocationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GPOrderServiceReference\GPConsumer.GPOrderServiceReference.DriverDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GPOrderServiceReference\GPConsumer.GPOrderServiceReference.DriverStatisticsDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GPOrderServiceReference\GPConsumer.GPOrderServiceReference.OrderDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GPOrderServiceReference\GPConsumer.GPOrderServiceReference.OrderStatDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GPOrderServiceReference\GPConsumer.GPOrderServiceReference.OrderStatusDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GPOrderServiceReference\GPConsumer.GPOrderServiceReference.VehicleDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GPOrderServiceReference\GPLib.DTO.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GPOrderServiceReference\service.wsdl" />
+    <None Include="Service References\GPOrderServiceReference\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GPOrderServiceReference\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\GPOrderServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\GPOrderServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\GPOrderServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\GPOrderServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GPConsumer.Events.DriverCreatedEventArgs" Collapsed="true">
+    <Position X="8.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Events\DriverCreatedEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPConsumer.Events.DriverDeletedEventArgs" Collapsed="true">
+    <Position X="8.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Events\DriverDeletedEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPConsumer.Events.StatusCreatedEventArgs" Collapsed="true">
+    <Position X="8.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAACAAABAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Events\StatusCreatedEventArgs.cs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPConsumer.Events.VehicleCreatedEventArgs" Collapsed="true">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Events\VehicleCreatedEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPConsumer.MainForm" Collapsed="true">
+    <Position X="13.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BXDjmQUKLiEgINEQAEKaH3CSENx70oEQ9XRfWCkBxEY=</HashCode>
+      <FileName>MainForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPConsumer.Program" Collapsed="true">
+    <Position X="7" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPConsumer.OtherForms.AddingStatusForm" Collapsed="true">
+    <Position X="10.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABAAAECAAAACAAAYAAAAEGAAAAAAAAA=</HashCode>
+      <FileName>OtherForms\AddingStatusForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPConsumer.OtherForms.DriverPropertiesForm" Collapsed="true">
+    <Position X="12" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACIBIRASYCBAADAIxACMIAYCAAgAAAAIAACNQCAgAAE=</HashCode>
+      <FileName>OtherForms\DriverPropertiesForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPConsumer.OtherForms.DriversForm" Collapsed="true">
+    <Position X="12" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIACGCCAAABAAAAmEAEBiBQwAACAEAAIAAgQAAhE=</HashCode>
+      <FileName>OtherForms\DriversForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPConsumer.OtherForms.DriverTrackForm" Collapsed="true">
+    <Position X="13.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>RQAAEAAAACAAABACAASAAAACAQAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>OtherForms\DriverTrackForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPConsumer.OtherForms.DriverVehiclesForm" Collapsed="true">
+    <Position X="13.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABJQEAACBAAAAAQACAAECiCEcAgAgQAAABAAAAAFE=</HashCode>
+      <FileName>OtherForms\DriverVehiclesForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPConsumer.OtherForms.LoginForm" Collapsed="true">
+    <Position X="13.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAACAAABAAAACAAAACAAAYAAAAEGAAAAAAAAA=</HashCode>
+      <FileName>OtherForms\LoginForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPConsumer.OtherForms.OrderPropertiesForm" Collapsed="true">
+    <Position X="12" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>cKCAkAwCAChAQZIAQACKACjCUUkggAAIEHE4AAAQICA=</HashCode>
+      <FileName>OtherForms\OrderPropertiesForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPConsumer.OtherForms.OrderStatisticFrom" Collapsed="true">
+    <Position X="13.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAgEACQAAAAAAACACAACAAgIAgAAAEIAAAAAAAA=</HashCode>
+      <FileName>OtherForms\OrderStatisticFrom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPConsumer.OtherForms.OrderStatusesForm" Collapsed="true">
+    <Position X="10.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEwACQAAAEEAECAAAACAAA4AAAAAHAAAAAAAAA=</HashCode>
+      <FileName>OtherForms\OrderStatusesForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPConsumer.OtherForms.SetInitialCoordinatesForm" Collapsed="true">
+    <Position X="12" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAkAQACCBAABAAAAKAAAgCAEABgAAAAAAIAAAAAAA=</HashCode>
+      <FileName>OtherForms\SetInitialCoordinatesForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPConsumer.OtherForms.SettingsForm" Collapsed="true">
+    <Position X="12" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAACAAABAAABCAAAgCAAAYAAACAGAAAAQAAAA=</HashCode>
+      <FileName>OtherForms\SettingsForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPConsumer.OtherForms.StatisticsForm" Collapsed="true">
+    <Position X="10.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UCAAAAAAASAAABAAAACAAABCIAAAAAAAEAAAAAAAAIA=</HashCode>
+      <FileName>OtherForms\StatisticsForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPConsumer.OtherForms.VehiclePropertiesForm" Collapsed="true">
+    <Position X="10.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAoAAAACBAABBAQACIBECCAAUIgCAACAABRAAgAAA=</HashCode>
+      <FileName>OtherForms\VehiclePropertiesForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPConsumer.Properties.Resources" Collapsed="true">
+    <Position X="2.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPConsumer.Properties.Settings" Collapsed="true">
+    <Position X="1" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAACAACAAAAAAAABAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPConsumer.GPOrderServiceReference.OrderDTO" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAwAAGAICAAAIJAAQIgAWAyAQIIAAkCAHAKYIDCAA=</HashCode>
+      <FileName>Service References\GPOrderServiceReference\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GPConsumer.GPOrderServiceReference.DriverCurrentLocationDTO" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAGAACAABAAAAQIgAEAgAAAAAQMAAAAAAIQBAA=</HashCode>
+      <FileName>Service References\GPOrderServiceReference\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GPConsumer.GPOrderServiceReference.CurrentLocationDTO" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAQACAACAAAAAAAQIgAEAgAAAAAAEAAAAAAIAAAA=</HashCode>
+      <FileName>Service References\GPOrderServiceReference\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GPConsumer.GPOrderServiceReference.OrderStatusDTO" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAIBAAAAAAEAgAAIAAAEAAAAAAIAAAA=</HashCode>
+      <FileName>Service References\GPOrderServiceReference\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GPConsumer.GPOrderServiceReference.DriverDTO" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAwIhEGgCAAAhEABCAABACEggAAAASMAAAAAQIAAAA=</HashCode>
+      <FileName>Service References\GPOrderServiceReference\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GPConsumer.GPOrderServiceReference.VehicleDTO" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAACMACBAQAQBEAAAAAIEACgAAAgEQEAAAAAAIBAAI=</HashCode>
+      <FileName>Service References\GPOrderServiceReference\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GPConsumer.GPOrderServiceReference.OrderStatDTO" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAAAAAACAAAAAAAAAAAAAAAAgAAAAAEUAAQAAIIAAAA=</HashCode>
+      <FileName>Service References\GPOrderServiceReference\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GPConsumer.GPOrderServiceReference.DriverStatisticsDTO" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAICAACAABAAAAQIgAEAgAAAAAREEAAAAAIAQBA=</HashCode>
+      <FileName>Service References\GPOrderServiceReference\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GPConsumer.GPOrderServiceReference.GPOrderClient" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACgAgwgCAAQIEAgAIADCgAAAAAIABggARCIAAAAg=</HashCode>
+      <FileName>Service References\GPOrderServiceReference\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GPConsumer.Utility.DictionaryHelper" Collapsed="true">
+    <Position X="4.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Utility\DictionaryHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPConsumer.Utility.DriverHelper" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAIAAAAAAAAAAAAAAAAgIgAA=</HashCode>
+      <FileName>Utility\DriverHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPConsumer.Utility.ExceptionLogger" Collapsed="true">
+    <Position X="1" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utility\ExceptionLogger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPConsumer.Utility.GeoHelper" Collapsed="true">
+    <Position X="3" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utility\GeoHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPConsumer.Utility.GMarkerArrow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="1" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAACAAAAAAAAIAAAACAACACAAAAAgAIAAAAAA=</HashCode>
+      <FileName>Utility\GMarkerArrow.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GPConsumer.Utility.GPTag" Collapsed="true">
+    <Position X="1" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Utility\GPTag.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPConsumer.Utility.MapHelper" Collapsed="true">
+    <Position X="1" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAgAAgABAEAAAAAAAAAAAAAABBAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Utility\MapHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPConsumer.Utility.MapSettings" Collapsed="true">
+    <Position X="1" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAIAAAAAAAAABAAAAgAAAAIAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Utility\MapSettings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPConsumer.Utility.OrderHelper" Collapsed="true">
+    <Position X="3" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACIAAAAAAAAAAAAAAiEAAAAAAAgAACAIAAAAAAAAAA=</HashCode>
+      <FileName>Utility\OrderHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPConsumer.Utility.SecurityHelper" Collapsed="true">
+    <Position X="3" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utility\SecurityHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPConsumer.Utility.StatHelper" Collapsed="true">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utility\StatHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPConsumer.Utility.VehicleHelper" Collapsed="true">
+    <Position X="4.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAIAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Utility\VehicleHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPConsumer.Utility.VehicleLocationHelper" Collapsed="true">
+    <Position X="4.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAkAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Utility\VehicleLocationHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPConsumer.Utility.VilnusTransportDemo" Collapsed="true">
+    <Position X="2.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utility\VilnusTransportDemo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="GPConsumer.Utility.VehicleData" Collapsed="true">
+    <Position X="1" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQACAIIAACAAGACAAAAAAAAAAAAAAAAAAAAAAAABAQA=</HashCode>
+      <FileName>Utility\VilnusTransportDemo.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="GPConsumer.GPOrderServiceReference.IGPOrder" Collapsed="true">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACgAgwgCAAQIEAgAIADCgAAAAAIABggARCIAAAAg=</HashCode>
+      <FileName>Service References\GPOrderServiceReference\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GPConsumer.GPOrderServiceReference.IGPOrderChannel" Collapsed="true">
+    <Position X="10.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\GPOrderServiceReference\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="GPConsumer.FormPuproses" Collapsed="true">
+    <Position X="2.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>MainForm.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="GPConsumer.Utility.ServiceCallResult" Collapsed="true">
+    <Position X="1" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utility\DriverHelper.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="GPConsumer.Events.DriverCreatedDelegate" Collapsed="true">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Events\Delegates.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="GPConsumer.Events.DriverUpdatedDelegate" Collapsed="true">
+    <Position X="6.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Events\Delegates.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="GPConsumer.Events.DriverDeletedDelegate" Collapsed="true">
+    <Position X="6.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Events\Delegates.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="GPConsumer.Events.VehicleCreatedDelegate" Collapsed="true">
+    <Position X="6.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Events\Delegates.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="GPConsumer.Events.StatusCreatedDelegate" Collapsed="true">
+    <Position X="6.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Events\Delegates.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="GPConsumer.Events.StatusDeletedDelegate" Collapsed="true">
+    <Position X="6.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Events\Delegates.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

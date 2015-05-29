@@ -1,0 +1,958 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="GPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="GPUser">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="UserPassword" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserRoleId" Type="int" Nullable="false" />
+          <Property Name="LastUpdated" Type="datetime" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserRole">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="RoleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RoleName" Type="varchar" MaxLength="50" />
+          <Property Name="LastUpdated" Type="datetime" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CurrentLocation">
+          <Key>
+            <PropertyRef Name="LocationId" />
+          </Key>
+          <Property Name="LocationId" Type="int" Nullable="false" />
+          <Property Name="Latitude" Type="float" Nullable="false" />
+          <Property Name="Longtitude" Type="float" Nullable="false" />
+          <Property Name="LastUpdated" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DriverLocation">
+          <Key>
+            <PropertyRef Name="RowId" />
+          </Key>
+          <Property Name="RowId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DriverId" Type="int" Nullable="false" />
+          <Property Name="Latitude" Type="float" Nullable="false" />
+          <Property Name="Longtitude" Type="float" Nullable="false" />
+          <Property Name="LastUpdated" Type="datetime" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="IsRead" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OrderCourierChanges">
+          <Key>
+            <PropertyRef Name="OrderCourierChangesId" />
+          </Key>
+          <Property Name="OrderCourierChangesId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OrderId" Type="int" Nullable="false" />
+          <Property Name="DeliveryDriverId" Type="int" />
+          <Property Name="LastUpdated" Type="datetime" />
+          <Property Name="IsRead" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OrderStatusChanges">
+          <Key>
+            <PropertyRef Name="OrderStatusChangesId" />
+          </Key>
+          <Property Name="OrderStatusChangesId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OrderId" Type="int" Nullable="false" />
+          <Property Name="OrderStatusId" Type="int" />
+          <Property Name="LastUpdated" Type="datetime" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="IsRead" Type="bit" />
+        </EntityType>
+        <EntityType Name="Driver">
+          <Key>
+            <PropertyRef Name="DriverId" />
+          </Key>
+          <Property Name="DriverId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DriverName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="PhoneNum" Type="varchar" MaxLength="20" />
+          <Property Name="LicenceNum" Type="varchar" MaxLength="10" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Notes" Type="nvarchar" MaxLength="300" />
+          <Property Name="PassportSeries" Type="varchar" MaxLength="10" />
+          <Property Name="PassportNum" Type="varchar" MaxLength="15" />
+          <Property Name="PassportGivenBy" Type="varchar" MaxLength="100" />
+          <Property Name="PassportGivenDate" Type="date" />
+          <Property Name="PassportGivenDivision" Type="varchar" MaxLength="10" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="LastUpdated" Type="datetime" Nullable="false" />
+          <Property Name="IsRead" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DriverCurrentLocation">
+          <Key>
+            <PropertyRef Name="DriverId" />
+          </Key>
+          <Property Name="DriverId" Type="int" Nullable="false" />
+          <Property Name="Latitude" Type="float" Nullable="false" />
+          <Property Name="Longtitude" Type="float" Nullable="false" />
+          <Property Name="VehicleTime" Type="time" Precision="7" Nullable="false" />
+          <Property Name="LastUpdated" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Orders">
+          <Key>
+            <PropertyRef Name="OrderId" />
+          </Key>
+          <Property Name="OrderId" Type="int" Nullable="false" />
+          <Property Name="CreatedDt" Type="datetime" />
+          <Property Name="DeliveryDriverId" Type="int" />
+          <Property Name="DeliveredDt" Type="datetime" />
+          <Property Name="DeliveryAdress" Type="varchar" MaxLength="500" />
+          <Property Name="Latitude" Type="float" />
+          <Property Name="Longtitude" Type="float" />
+          <Property Name="City" Type="varchar" MaxLength="100" />
+          <Property Name="Comment" Type="varchar" MaxLength="500" />
+          <Property Name="OrderStatusId" Type="int" Nullable="false" />
+          <Property Name="CustomerName" Type="varchar" MaxLength="100" />
+          <Property Name="GoodsList" Type="varchar" MaxLength="500" />
+          <Property Name="Phone" Type="varchar" MaxLength="50" />
+          <Property Name="TotalCost" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="LastUpdated" Type="datetime" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="IsRead" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OrderStatus">
+          <Key>
+            <PropertyRef Name="OrderStatusId" />
+          </Key>
+          <Property Name="OrderStatusId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OrderStatusName" Type="varchar" MaxLength="50" />
+          <Property Name="LastUpdatedDt" Type="datetime" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Vehicle">
+          <Key>
+            <PropertyRef Name="VehicleId" />
+          </Key>
+          <Property Name="VehicleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DriverId" Type="int" Nullable="false" />
+          <Property Name="Brand" Type="nvarchar" MaxLength="30" />
+          <Property Name="LicencePlate" Type="nvarchar" MaxLength="9" />
+          <Property Name="Length" Type="numeric" Precision="5" Scale="2" />
+          <Property Name="Width" Type="numeric" Precision="5" Scale="2" />
+          <Property Name="Height" Type="numeric" Precision="5" Scale="2" />
+          <Property Name="Capacity" Type="numeric" Precision="5" Scale="2" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="LastUpdated" Type="datetime" Nullable="false" />
+          <Property Name="IsRead" Type="bit" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__DriverCur__Drive__3429BB53">
+          <End Role="Driver" Type="Self.Driver" Multiplicity="1" />
+          <End Role="DriverCurrentLocation" Type="Self.DriverCurrentLocation" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Driver">
+              <PropertyRef Name="DriverId" />
+            </Principal>
+            <Dependent Role="DriverCurrentLocation">
+              <PropertyRef Name="DriverId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DriverLoc__Drive__3DB3258D">
+          <End Role="Driver" Type="Self.Driver" Multiplicity="1" />
+          <End Role="DriverLocation" Type="Self.DriverLocation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Driver">
+              <PropertyRef Name="DriverId" />
+            </Principal>
+            <Dependent Role="DriverLocation">
+              <PropertyRef Name="DriverId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GPUser__UserRole__5E54FF49">
+          <End Role="UserRole" Type="Self.UserRole" Multiplicity="1" />
+          <End Role="GPUser" Type="Self.GPUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserRole">
+              <PropertyRef Name="RoleId" />
+            </Principal>
+            <Dependent Role="GPUser">
+              <PropertyRef Name="UserRoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__OrderCour__Deliv__2116E6DF">
+          <End Role="Driver" Type="Self.Driver" Multiplicity="0..1" />
+          <End Role="OrderCourierChanges" Type="Self.OrderCourierChanges" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Driver">
+              <PropertyRef Name="DriverId" />
+            </Principal>
+            <Dependent Role="OrderCourierChanges">
+              <PropertyRef Name="DeliveryDriverId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__OrderCour__Order__220B0B18">
+          <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
+          <End Role="OrderCourierChanges" Type="Self.OrderCourierChanges" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="OrderId" />
+            </Principal>
+            <Dependent Role="OrderCourierChanges">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Orders__Delivery__2CBDA3B5">
+          <End Role="Driver" Type="Self.Driver" Multiplicity="0..1" />
+          <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Driver">
+              <PropertyRef Name="DriverId" />
+            </Principal>
+            <Dependent Role="Orders">
+              <PropertyRef Name="DeliveryDriverId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Orders__OrderSta__2DB1C7EE">
+          <End Role="OrderStatus" Type="Self.OrderStatus" Multiplicity="1" />
+          <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrderStatus">
+              <PropertyRef Name="OrderStatusId" />
+            </Principal>
+            <Dependent Role="Orders">
+              <PropertyRef Name="OrderStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__OrderStat__Order__74444068">
+          <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
+          <End Role="OrderStatusChanges" Type="Self.OrderStatusChanges" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="OrderId" />
+            </Principal>
+            <Dependent Role="OrderStatusChanges">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__OrderStat__Order__753864A1">
+          <End Role="OrderStatus" Type="Self.OrderStatus" Multiplicity="0..1" />
+          <End Role="OrderStatusChanges" Type="Self.OrderStatusChanges" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrderStatus">
+              <PropertyRef Name="OrderStatusId" />
+            </Principal>
+            <Dependent Role="OrderStatusChanges">
+              <PropertyRef Name="OrderStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Vehicle__DriverI__4B7734FF">
+          <End Role="Driver" Type="Self.Driver" Multiplicity="1" />
+          <End Role="Vehicle" Type="Self.Vehicle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Driver">
+              <PropertyRef Name="DriverId" />
+            </Principal>
+            <Dependent Role="Vehicle">
+              <PropertyRef Name="DriverId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="DriverTrackList_Get" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="dt2" Type="varchar" Mode="In" />
+          <Parameter Name="R" Type="int" Mode="In" />
+          <Parameter Name="driverId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="OrderStatistics_Get" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="History">
+          <Parameter Name="order_id" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="GPModelStoreContainer">
+          <EntitySet Name="GPUser" EntityType="Self.GPUser" Schema="GPSecurity" store:Type="Tables" />
+          <EntitySet Name="UserRole" EntityType="Self.UserRole" Schema="GPSecurity" store:Type="Tables" />
+          <EntitySet Name="CurrentLocation" EntityType="Self.CurrentLocation" Schema="History" store:Type="Tables" />
+          <EntitySet Name="DriverLocation" EntityType="Self.DriverLocation" Schema="History" store:Type="Tables" />
+          <EntitySet Name="OrderCourierChanges" EntityType="Self.OrderCourierChanges" Schema="History" store:Type="Tables" />
+          <EntitySet Name="OrderStatusChanges" EntityType="Self.OrderStatusChanges" Schema="History" store:Type="Tables" />
+          <EntitySet Name="Driver" EntityType="Self.Driver" Schema="HumanResources" store:Type="Tables" />
+          <EntitySet Name="DriverCurrentLocation" EntityType="Self.DriverCurrentLocation" Schema="HumanResources" store:Type="Tables" />
+          <EntitySet Name="Orders" EntityType="Self.Orders" Schema="Orders" store:Type="Tables" />
+          <EntitySet Name="OrderStatus" EntityType="Self.OrderStatus" Schema="Orders" store:Type="Tables" />
+          <EntitySet Name="Vehicle" EntityType="Self.Vehicle" Schema="Vehicles" store:Type="Tables" />
+          <AssociationSet Name="FK__DriverCur__Drive__3429BB53" Association="Self.FK__DriverCur__Drive__3429BB53">
+            <End Role="Driver" EntitySet="Driver" />
+            <End Role="DriverCurrentLocation" EntitySet="DriverCurrentLocation" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DriverLoc__Drive__3DB3258D" Association="Self.FK__DriverLoc__Drive__3DB3258D">
+            <End Role="Driver" EntitySet="Driver" />
+            <End Role="DriverLocation" EntitySet="DriverLocation" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GPUser__UserRole__5E54FF49" Association="Self.FK__GPUser__UserRole__5E54FF49">
+            <End Role="UserRole" EntitySet="UserRole" />
+            <End Role="GPUser" EntitySet="GPUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK__OrderCour__Deliv__2116E6DF" Association="Self.FK__OrderCour__Deliv__2116E6DF">
+            <End Role="Driver" EntitySet="Driver" />
+            <End Role="OrderCourierChanges" EntitySet="OrderCourierChanges" />
+          </AssociationSet>
+          <AssociationSet Name="FK__OrderCour__Order__220B0B18" Association="Self.FK__OrderCour__Order__220B0B18">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="OrderCourierChanges" EntitySet="OrderCourierChanges" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Orders__Delivery__2CBDA3B5" Association="Self.FK__Orders__Delivery__2CBDA3B5">
+            <End Role="Driver" EntitySet="Driver" />
+            <End Role="Orders" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Orders__OrderSta__2DB1C7EE" Association="Self.FK__Orders__OrderSta__2DB1C7EE">
+            <End Role="OrderStatus" EntitySet="OrderStatus" />
+            <End Role="Orders" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK__OrderStat__Order__74444068" Association="Self.FK__OrderStat__Order__74444068">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="OrderStatusChanges" EntitySet="OrderStatusChanges" />
+          </AssociationSet>
+          <AssociationSet Name="FK__OrderStat__Order__753864A1" Association="Self.FK__OrderStat__Order__753864A1">
+            <End Role="OrderStatus" EntitySet="OrderStatus" />
+            <End Role="OrderStatusChanges" EntitySet="OrderStatusChanges" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Vehicle__DriverI__4B7734FF" Association="Self.FK__Vehicle__DriverI__4B7734FF">
+            <End Role="Driver" EntitySet="Driver" />
+            <End Role="Vehicle" EntitySet="Vehicle" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GPModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="GPEntities" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="OrderStatistics_Get" ReturnType="Collection(GPModel.OrderStatistics_Get_Result)">
+            <Parameter Name="order_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="OrderStatistics_Get1" ReturnType="Collection(GPModel.OrderStatistics_Get1_Result)">
+            <Parameter Name="order_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="OrderStatistics_Get2" ReturnType="Collection(GPModel.OrderStatistics_Get2_Result)">
+          <Parameter Name="order_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="GPUsers" EntityType="GPModel.GPUser" />
+          <EntitySet Name="UserRoles" EntityType="GPModel.UserRole" />
+          <EntitySet Name="CurrentLocations" EntityType="GPModel.CurrentLocation" />
+          <EntitySet Name="DriverLocations" EntityType="GPModel.DriverLocation" />
+          <EntitySet Name="OrderCourierChanges" EntityType="GPModel.OrderCourierChanx" />
+          <EntitySet Name="OrderStatusChanges" EntityType="GPModel.OrderStatusChanx" />
+          <EntitySet Name="Drivers" EntityType="GPModel.Driver" />
+          <EntitySet Name="DriverCurrentLocations" EntityType="GPModel.DriverCurrentLocation" />
+          <EntitySet Name="Orders" EntityType="GPModel.Order" />
+          <EntitySet Name="OrderStatus" EntityType="GPModel.OrderStatu" />
+          <EntitySet Name="Vehicles" EntityType="GPModel.Vehicle" />
+          <AssociationSet Name="FK__GPUser__UserRole__5E54FF49" Association="GPModel.FK__GPUser__UserRole__5E54FF49">
+            <End Role="UserRole" EntitySet="UserRoles" />
+            <End Role="GPUser" EntitySet="GPUsers" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DriverLoc__Drive__3DB3258D" Association="GPModel.FK__DriverLoc__Drive__3DB3258D">
+            <End Role="Driver" EntitySet="Drivers" />
+            <End Role="DriverLocation" EntitySet="DriverLocations" />
+          </AssociationSet>
+          <AssociationSet Name="FK__OrderCour__Deliv__2116E6DF" Association="GPModel.FK__OrderCour__Deliv__2116E6DF">
+            <End Role="Driver" EntitySet="Drivers" />
+            <End Role="OrderCourierChanx" EntitySet="OrderCourierChanges" />
+          </AssociationSet>
+          <AssociationSet Name="FK__OrderCour__Order__220B0B18" Association="GPModel.FK__OrderCour__Order__220B0B18">
+            <End Role="Order" EntitySet="Orders" />
+            <End Role="OrderCourierChanx" EntitySet="OrderCourierChanges" />
+          </AssociationSet>
+          <AssociationSet Name="FK__OrderStat__Order__74444068" Association="GPModel.FK__OrderStat__Order__74444068">
+            <End Role="Order" EntitySet="Orders" />
+            <End Role="OrderStatusChanx" EntitySet="OrderStatusChanges" />
+          </AssociationSet>
+          <AssociationSet Name="FK__OrderStat__Order__753864A1" Association="GPModel.FK__OrderStat__Order__753864A1">
+            <End Role="OrderStatu" EntitySet="OrderStatus" />
+            <End Role="OrderStatusChanx" EntitySet="OrderStatusChanges" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DriverCur__Drive__3429BB53" Association="GPModel.FK__DriverCur__Drive__3429BB53">
+            <End Role="Driver" EntitySet="Drivers" />
+            <End Role="DriverCurrentLocation" EntitySet="DriverCurrentLocations" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Orders__Delivery__2CBDA3B5" Association="GPModel.FK__Orders__Delivery__2CBDA3B5">
+            <End Role="Driver" EntitySet="Drivers" />
+            <End Role="Order" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Vehicle__DriverI__4B7734FF" Association="GPModel.FK__Vehicle__DriverI__4B7734FF">
+            <End Role="Driver" EntitySet="Drivers" />
+            <End Role="Vehicle" EntitySet="Vehicles" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Orders__OrderSta__2DB1C7EE" Association="GPModel.FK__Orders__OrderSta__2DB1C7EE">
+            <End Role="OrderStatu" EntitySet="OrderStatus" />
+            <End Role="Order" EntitySet="Orders" />
+          </AssociationSet>
+          <FunctionImport Name="DriverTrackList_Get" ReturnType="Collection(GPModel.DriverTrackList_Get_Result1)">
+            <Parameter Name="dt2" Mode="In" Type="String" />
+            <Parameter Name="R" Mode="In" Type="Int32" />
+            <Parameter Name="driverId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          </EntityContainer>
+        <ComplexType Name="OrderStatistics_Get_Result">
+          <Property Type="DateTime" Name="dt" Nullable="true" Precision="23" />
+          <Property Type="String" Name="descr" Nullable="true" MaxLength="119" />
+        </ComplexType>
+        <ComplexType Name="OrderStatistics_Get1_Result">
+          <Property Type="Int32" Name="OrderId" Nullable="true" />
+          <Property Type="DateTime" Name="dt" Nullable="true" Precision="23" />
+          <Property Type="String" Name="descr" Nullable="true" MaxLength="119" />
+        </ComplexType>
+        <ComplexType Name="OrderStatistics_Get2_Result">
+          <Property Type="Int32" Name="OrderId" Nullable="true" />
+          <Property Type="DateTime" Name="dt" Nullable="true" Precision="23" />
+          <Property Type="String" Name="descr" Nullable="true" MaxLength="119" />
+        </ComplexType>
+        <EntityType Name="GPUser">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserRoleId" Type="Int32" Nullable="false" />
+          <Property Name="LastUpdated" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="UserRole" Relationship="GPModel.FK__GPUser__UserRole__5E54FF49" FromRole="GPUser" ToRole="UserRole" />
+        </EntityType>
+        <EntityType Name="UserRole">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="RoleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LastUpdated" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="GPUsers" Relationship="GPModel.FK__GPUser__UserRole__5E54FF49" FromRole="UserRole" ToRole="GPUser" />
+        </EntityType>
+        <EntityType Name="CurrentLocation">
+          <Key>
+            <PropertyRef Name="LocationId" />
+          </Key>
+          <Property Name="LocationId" Type="Int32" Nullable="false" />
+          <Property Name="Latitude" Type="Double" Nullable="false" />
+          <Property Name="Longtitude" Type="Double" Nullable="false" />
+          <Property Name="LastUpdated" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="DriverLocation">
+          <Key>
+            <PropertyRef Name="RowId" />
+          </Key>
+          <Property Name="RowId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DriverId" Type="Int32" Nullable="false" />
+          <Property Name="Latitude" Type="Double" Nullable="false" />
+          <Property Name="Longtitude" Type="Double" Nullable="false" />
+          <Property Name="LastUpdated" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="IsRead" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Driver" Relationship="GPModel.FK__DriverLoc__Drive__3DB3258D" FromRole="DriverLocation" ToRole="Driver" />
+        </EntityType>
+        <EntityType Name="OrderCourierChanx">
+          <Key>
+            <PropertyRef Name="OrderCourierChangesId" />
+          </Key>
+          <Property Name="OrderCourierChangesId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrderId" Type="Int32" Nullable="false" />
+          <Property Name="DeliveryDriverId" Type="Int32" />
+          <Property Name="LastUpdated" Type="DateTime" Precision="3" />
+          <Property Name="IsRead" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Driver" Relationship="GPModel.FK__OrderCour__Deliv__2116E6DF" FromRole="OrderCourierChanx" ToRole="Driver" />
+          <NavigationProperty Name="Order" Relationship="GPModel.FK__OrderCour__Order__220B0B18" FromRole="OrderCourierChanx" ToRole="Order" />
+        </EntityType>
+        <EntityType Name="OrderStatusChanx">
+          <Key>
+            <PropertyRef Name="OrderStatusChangesId" />
+          </Key>
+          <Property Name="OrderStatusChangesId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrderId" Type="Int32" Nullable="false" />
+          <Property Name="OrderStatusId" Type="Int32" />
+          <Property Name="LastUpdated" Type="DateTime" Precision="3" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="IsRead" Type="Boolean" />
+          <NavigationProperty Name="Order" Relationship="GPModel.FK__OrderStat__Order__74444068" FromRole="OrderStatusChanx" ToRole="Order" />
+          <NavigationProperty Name="OrderStatu" Relationship="GPModel.FK__OrderStat__Order__753864A1" FromRole="OrderStatusChanx" ToRole="OrderStatu" />
+        </EntityType>
+        <EntityType Name="Driver">
+          <Key>
+            <PropertyRef Name="DriverId" />
+          </Key>
+          <Property Name="DriverId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DriverName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNum" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="LicenceNum" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Notes" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="PassportSeries" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="PassportNum" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="PassportGivenBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PassportGivenDate" Type="DateTime" Precision="0" />
+          <Property Name="PassportGivenDivision" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="LastUpdated" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IsRead" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="DriverLocations" Relationship="GPModel.FK__DriverLoc__Drive__3DB3258D" FromRole="Driver" ToRole="DriverLocation" />
+          <NavigationProperty Name="OrderCourierChanges" Relationship="GPModel.FK__OrderCour__Deliv__2116E6DF" FromRole="Driver" ToRole="OrderCourierChanx" />
+          <NavigationProperty Name="DriverCurrentLocation" Relationship="GPModel.FK__DriverCur__Drive__3429BB53" FromRole="Driver" ToRole="DriverCurrentLocation" />
+          <NavigationProperty Name="Orders" Relationship="GPModel.FK__Orders__Delivery__2CBDA3B5" FromRole="Driver" ToRole="Order" />
+          <NavigationProperty Name="Vehicles" Relationship="GPModel.FK__Vehicle__DriverI__4B7734FF" FromRole="Driver" ToRole="Vehicle" />
+        </EntityType>
+        <EntityType Name="DriverCurrentLocation">
+          <Key>
+            <PropertyRef Name="DriverId" />
+          </Key>
+          <Property Name="DriverId" Type="Int32" Nullable="false" />
+          <Property Name="Latitude" Type="Double" Nullable="false" />
+          <Property Name="Longtitude" Type="Double" Nullable="false" />
+          <Property Name="VehicleTime" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="LastUpdated" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Driver" Relationship="GPModel.FK__DriverCur__Drive__3429BB53" FromRole="DriverCurrentLocation" ToRole="Driver" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="OrderId" />
+          </Key>
+          <Property Name="OrderId" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDt" Type="DateTime" Precision="3" />
+          <Property Name="DeliveryDriverId" Type="Int32" />
+          <Property Name="DeliveredDt" Type="DateTime" Precision="3" />
+          <Property Name="DeliveryAdress" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Latitude" Type="Double" />
+          <Property Name="Longtitude" Type="Double" />
+          <Property Name="City" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Comment" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="OrderStatusId" Type="Int32" Nullable="false" />
+          <Property Name="CustomerName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="GoodsList" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TotalCost" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="LastUpdated" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="IsRead" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="OrderCourierChanges" Relationship="GPModel.FK__OrderCour__Order__220B0B18" FromRole="Order" ToRole="OrderCourierChanx" />
+          <NavigationProperty Name="OrderStatusChanges" Relationship="GPModel.FK__OrderStat__Order__74444068" FromRole="Order" ToRole="OrderStatusChanx" />
+          <NavigationProperty Name="Driver" Relationship="GPModel.FK__Orders__Delivery__2CBDA3B5" FromRole="Order" ToRole="Driver" />
+          <NavigationProperty Name="OrderStatu" Relationship="GPModel.FK__Orders__OrderSta__2DB1C7EE" FromRole="Order" ToRole="OrderStatu" />
+        </EntityType>
+        <EntityType Name="OrderStatu">
+          <Key>
+            <PropertyRef Name="OrderStatusId" />
+          </Key>
+          <Property Name="OrderStatusId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrderStatusName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LastUpdatedDt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="OrderStatusChanges" Relationship="GPModel.FK__OrderStat__Order__753864A1" FromRole="OrderStatu" ToRole="OrderStatusChanx" />
+          <NavigationProperty Name="Orders" Relationship="GPModel.FK__Orders__OrderSta__2DB1C7EE" FromRole="OrderStatu" ToRole="Order" />
+        </EntityType>
+        <EntityType Name="Vehicle">
+          <Key>
+            <PropertyRef Name="VehicleId" />
+          </Key>
+          <Property Name="VehicleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DriverId" Type="Int32" Nullable="false" />
+          <Property Name="Brand" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="LicencePlate" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+          <Property Name="Length" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="Width" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="Height" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="Capacity" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="LastUpdated" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IsRead" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Driver" Relationship="GPModel.FK__Vehicle__DriverI__4B7734FF" FromRole="Vehicle" ToRole="Driver" />
+        </EntityType>
+        <Association Name="FK__GPUser__UserRole__5E54FF49">
+          <End Type="GPModel.UserRole" Role="UserRole" Multiplicity="1" />
+          <End Type="GPModel.GPUser" Role="GPUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserRole">
+              <PropertyRef Name="RoleId" />
+            </Principal>
+            <Dependent Role="GPUser">
+              <PropertyRef Name="UserRoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DriverLoc__Drive__3DB3258D">
+          <End Type="GPModel.Driver" Role="Driver" Multiplicity="1" />
+          <End Type="GPModel.DriverLocation" Role="DriverLocation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Driver">
+              <PropertyRef Name="DriverId" />
+            </Principal>
+            <Dependent Role="DriverLocation">
+              <PropertyRef Name="DriverId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__OrderCour__Deliv__2116E6DF">
+          <End Type="GPModel.Driver" Role="Driver" Multiplicity="0..1" />
+          <End Type="GPModel.OrderCourierChanx" Role="OrderCourierChanx" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Driver">
+              <PropertyRef Name="DriverId" />
+            </Principal>
+            <Dependent Role="OrderCourierChanx">
+              <PropertyRef Name="DeliveryDriverId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__OrderCour__Order__220B0B18">
+          <End Type="GPModel.Order" Role="Order" Multiplicity="1" />
+          <End Type="GPModel.OrderCourierChanx" Role="OrderCourierChanx" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="OrderId" />
+            </Principal>
+            <Dependent Role="OrderCourierChanx">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__OrderStat__Order__74444068">
+          <End Type="GPModel.Order" Role="Order" Multiplicity="1" />
+          <End Type="GPModel.OrderStatusChanx" Role="OrderStatusChanx" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="OrderId" />
+            </Principal>
+            <Dependent Role="OrderStatusChanx">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__OrderStat__Order__753864A1">
+          <End Type="GPModel.OrderStatu" Role="OrderStatu" Multiplicity="0..1" />
+          <End Type="GPModel.OrderStatusChanx" Role="OrderStatusChanx" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrderStatu">
+              <PropertyRef Name="OrderStatusId" />
+            </Principal>
+            <Dependent Role="OrderStatusChanx">
+              <PropertyRef Name="OrderStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DriverCur__Drive__3429BB53">
+          <End Type="GPModel.Driver" Role="Driver" Multiplicity="1" />
+          <End Type="GPModel.DriverCurrentLocation" Role="DriverCurrentLocation" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Driver">
+              <PropertyRef Name="DriverId" />
+            </Principal>
+            <Dependent Role="DriverCurrentLocation">
+              <PropertyRef Name="DriverId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Orders__Delivery__2CBDA3B5">
+          <End Type="GPModel.Driver" Role="Driver" Multiplicity="0..1" />
+          <End Type="GPModel.Order" Role="Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Driver">
+              <PropertyRef Name="DriverId" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="DeliveryDriverId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Vehicle__DriverI__4B7734FF">
+          <End Type="GPModel.Driver" Role="Driver" Multiplicity="1" />
+          <End Type="GPModel.Vehicle" Role="Vehicle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Driver">
+              <PropertyRef Name="DriverId" />
+            </Principal>
+            <Dependent Role="Vehicle">
+              <PropertyRef Name="DriverId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Orders__OrderSta__2DB1C7EE">
+          <End Type="GPModel.OrderStatu" Role="OrderStatu" Multiplicity="1" />
+          <End Type="GPModel.Order" Role="Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrderStatu">
+              <PropertyRef Name="OrderStatusId" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="OrderStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="DriverTrackList_Get_Result">
+          <Property Type="Int32" Name="RowId" Nullable="true" />
+          <Property Type="Int32" Name="DriverId" Nullable="false" />
+          <Property Type="Double" Name="Latitude" Nullable="false" />
+          <Property Type="Double" Name="Longtitude" Nullable="false" />
+          <Property Type="DateTime" Name="LastUpdated" Nullable="true" Precision="23" />
+          <Property Type="Double" Name="Bearing" Nullable="false" />
+          <Property Type="Double" Name="Distance" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="DriverTrackList_Get2_Result">
+          <Property Type="Int32" Name="RowId" Nullable="true" />
+          <Property Type="Int32" Name="DriverId" Nullable="false" />
+          <Property Type="Double" Name="Latitude" Nullable="false" />
+          <Property Type="Double" Name="Longtitude" Nullable="false" />
+          <Property Type="DateTime" Name="LastUpdated" Nullable="true" Precision="23" />
+          <Property Type="Double" Name="Bearing" Nullable="false" />
+          <Property Type="Double" Name="Distance" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="DistanceBearing_Result">
+          <Property Type="Double" Name="Distance" Nullable="true" />
+          <Property Type="Double" Name="Bearing" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="DriverTrackList_Get21_Result">
+          <Property Type="Int32" Name="RowId" Nullable="true" />
+          <Property Type="Int32" Name="DriverId" Nullable="false" />
+          <Property Type="Double" Name="Latitude" Nullable="false" />
+          <Property Type="Double" Name="Longtitude" Nullable="false" />
+          <Property Type="DateTime" Name="LastUpdated" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="DriverTrackList_Get3_Result">
+          <Property Type="DateTime" Name="dt" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="r" Nullable="true" />
+          <Property Type="Int32" Name="INTtt" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="DriverTrackList_Get31_Result">
+          <Property Type="DateTime" Name="dt" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="r" Nullable="true" />
+          <Property Type="Int32" Name="INTtt" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="DriverTrackList_Get3_Result1">
+          <Property Type="DateTime" Name="dt" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="r" Nullable="true" />
+          <Property Type="Int32" Name="INTtt" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="DriverTrackList_Get3_Result2">
+          <Property Type="Int32" Name="dt" Nullable="false" />
+          <Property Type="Int32" Name="r" Nullable="false" />
+          <Property Type="Int32" Name="INTtt" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="DriverTrackList_Get3_Result3">
+          <Property Type="Int32" Name="dt" Nullable="false" />
+          <Property Type="Int32" Name="r" Nullable="false" />
+          <Property Type="Int32" Name="INTtt" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="DriverTrackList_Get3_Result4">
+          <Property Type="Int32" Name="dt" Nullable="false" />
+          <Property Type="Int32" Name="r" Nullable="false" />
+          <Property Type="Int32" Name="INTtt" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="DriverTrackList_Get_Result1">
+          <Property Type="Int32" Name="RowId" Nullable="true" />
+          <Property Type="Int32" Name="DriverId" Nullable="false" />
+          <Property Type="Double" Name="Latitude" Nullable="false" />
+          <Property Type="Double" Name="Longtitude" Nullable="false" />
+          <Property Type="DateTime" Name="LastUpdated" Nullable="true" Precision="23" />
+          <Property Type="Double" Name="Bearing" Nullable="false" />
+          <Property Type="Double" Name="Distance" Nullable="true" />
+        </ComplexType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GPModelStoreContainer" CdmEntityContainer="GPEntities">
+          <FunctionImportMapping FunctionImportName="OrderStatistics_Get2" FunctionName="GPModel.Store.OrderStatistics_Get">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GPModel.OrderStatistics_Get2_Result">
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+                <ScalarProperty Name="dt" ColumnName="dt" />
+                <ScalarProperty Name="descr" ColumnName="descr" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="GPUsers">
+            <EntityTypeMapping TypeName="GPModel.GPUser">
+              <MappingFragment StoreEntitySet="GPUser">
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+                <ScalarProperty Name="UserRoleId" ColumnName="UserRoleId" />
+                <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserRoles">
+            <EntityTypeMapping TypeName="GPModel.UserRole">
+              <MappingFragment StoreEntitySet="UserRole">
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CurrentLocations">
+            <EntityTypeMapping TypeName="GPModel.CurrentLocation">
+              <MappingFragment StoreEntitySet="CurrentLocation">
+                <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+                <ScalarProperty Name="Longtitude" ColumnName="Longtitude" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="LocationId" ColumnName="LocationId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DriverLocations">
+            <EntityTypeMapping TypeName="GPModel.DriverLocation">
+              <MappingFragment StoreEntitySet="DriverLocation">
+                <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+                <ScalarProperty Name="Longtitude" ColumnName="Longtitude" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="DriverId" ColumnName="DriverId" />
+                <ScalarProperty Name="RowId" ColumnName="RowId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderCourierChanges">
+            <EntityTypeMapping TypeName="GPModel.OrderCourierChanx">
+              <MappingFragment StoreEntitySet="OrderCourierChanges">
+                <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+                <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+                <ScalarProperty Name="DeliveryDriverId" ColumnName="DeliveryDriverId" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+                <ScalarProperty Name="OrderCourierChangesId" ColumnName="OrderCourierChangesId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderStatusChanges">
+            <EntityTypeMapping TypeName="GPModel.OrderStatusChanx">
+              <MappingFragment StoreEntitySet="OrderStatusChanges">
+                <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+                <ScalarProperty Name="OrderStatusId" ColumnName="OrderStatusId" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+                <ScalarProperty Name="OrderStatusChangesId" ColumnName="OrderStatusChangesId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Drivers">
+            <EntityTypeMapping TypeName="GPModel.Driver">
+              <MappingFragment StoreEntitySet="Driver">
+                <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+                <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="PassportGivenDivision" ColumnName="PassportGivenDivision" />
+                <ScalarProperty Name="PassportGivenDate" ColumnName="PassportGivenDate" />
+                <ScalarProperty Name="PassportGivenBy" ColumnName="PassportGivenBy" />
+                <ScalarProperty Name="PassportNum" ColumnName="PassportNum" />
+                <ScalarProperty Name="PassportSeries" ColumnName="PassportSeries" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="LicenceNum" ColumnName="LicenceNum" />
+                <ScalarProperty Name="PhoneNum" ColumnName="PhoneNum" />
+                <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+                <ScalarProperty Name="DriverId" ColumnName="DriverId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DriverCurrentLocations">
+            <EntityTypeMapping TypeName="GPModel.DriverCurrentLocation">
+              <MappingFragment StoreEntitySet="DriverCurrentLocation">
+                <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+                <ScalarProperty Name="VehicleTime" ColumnName="VehicleTime" />
+                <ScalarProperty Name="Longtitude" ColumnName="Longtitude" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="DriverId" ColumnName="DriverId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Orders">
+            <EntityTypeMapping TypeName="GPModel.Order">
+              <MappingFragment StoreEntitySet="Orders">
+                <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+                <ScalarProperty Name="TotalCost" ColumnName="TotalCost" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="GoodsList" ColumnName="GoodsList" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="OrderStatusId" ColumnName="OrderStatusId" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Longtitude" ColumnName="Longtitude" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="DeliveryAdress" ColumnName="DeliveryAdress" />
+                <ScalarProperty Name="DeliveredDt" ColumnName="DeliveredDt" />
+                <ScalarProperty Name="DeliveryDriverId" ColumnName="DeliveryDriverId" />
+                <ScalarProperty Name="CreatedDt" ColumnName="CreatedDt" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderStatus">
+            <EntityTypeMapping TypeName="GPModel.OrderStatu">
+              <MappingFragment StoreEntitySet="OrderStatus">
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="LastUpdatedDt" ColumnName="LastUpdatedDt" />
+                <ScalarProperty Name="OrderStatusName" ColumnName="OrderStatusName" />
+                <ScalarProperty Name="OrderStatusId" ColumnName="OrderStatusId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vehicles">
+            <EntityTypeMapping TypeName="GPModel.Vehicle">
+              <MappingFragment StoreEntitySet="Vehicle">
+                <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+                <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="Width" ColumnName="Width" />
+                <ScalarProperty Name="Length" ColumnName="Length" />
+                <ScalarProperty Name="LicencePlate" ColumnName="LicencePlate" />
+                <ScalarProperty Name="Brand" ColumnName="Brand" />
+                <ScalarProperty Name="DriverId" ColumnName="DriverId" />
+                <ScalarProperty Name="VehicleId" ColumnName="VehicleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="DriverTrackList_Get" FunctionName="GPModel.Store.DriverTrackList_Get">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GPModel.DriverTrackList_Get_Result1">
+                <ScalarProperty Name="RowId" ColumnName="RowId" />
+                <ScalarProperty Name="DriverId" ColumnName="DriverId" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="Longtitude" ColumnName="Longtitude" />
+                <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+                <ScalarProperty Name="Bearing" ColumnName="Bearing" />
+                <ScalarProperty Name="Distance" ColumnName="Distance" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

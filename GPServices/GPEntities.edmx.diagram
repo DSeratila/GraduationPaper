@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ccfe472906274736b1852358a2e14d75" Name="Diagram1" ZoomLevel="37">
+        <EntityTypeShape EntityType="GPModel.GPUser" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="GPModel.UserRole" Width="1.5" PointX="0.75" PointY="1.125" />
+        <EntityTypeShape EntityType="GPModel.CurrentLocation" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="GPModel.DriverLocation" Width="1.5" PointX="3" PointY="18" />
+        <EntityTypeShape EntityType="GPModel.OrderCourierChanx" Width="1.5" PointX="3" PointY="9.75" />
+        <EntityTypeShape EntityType="GPModel.OrderStatusChanx" Width="1.5" PointX="8.25" PointY="9.75" />
+        <EntityTypeShape EntityType="GPModel.Driver" Width="1.5" PointX="0.75" PointY="8.625" />
+        <EntityTypeShape EntityType="GPModel.DriverCurrentLocation" Width="1.5" PointX="3" PointY="6.25" />
+        <EntityTypeShape EntityType="GPModel.Order" Width="1.5" PointX="6" PointY="8.5" />
+        <EntityTypeShape EntityType="GPModel.OrderStatu" Width="1.5" PointX="3.75" PointY="13.875" />
+        <EntityTypeShape EntityType="GPModel.Vehicle" Width="1.5" PointX="3" PointY="21.375" />
+        <AssociationConnector Association="GPModel.FK__GPUser__UserRole__5E54FF49" />
+        <AssociationConnector Association="GPModel.FK__DriverLoc__Drive__3DB3258D" />
+        <AssociationConnector Association="GPModel.FK__OrderCour__Deliv__2116E6DF" />
+        <AssociationConnector Association="GPModel.FK__OrderCour__Order__220B0B18" />
+        <AssociationConnector Association="GPModel.FK__OrderStat__Order__74444068" />
+        <AssociationConnector Association="GPModel.FK__OrderStat__Order__753864A1" />
+        <AssociationConnector Association="GPModel.FK__DriverCur__Drive__3429BB53" />
+        <AssociationConnector Association="GPModel.FK__Orders__Delivery__2CBDA3B5" />
+        <AssociationConnector Association="GPModel.FK__Vehicle__DriverI__4B7734FF" />
+        <AssociationConnector Association="GPModel.FK__Orders__OrderSta__2DB1C7EE" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
