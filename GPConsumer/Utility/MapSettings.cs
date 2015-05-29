@@ -11,7 +11,7 @@ namespace GPConsumer.Utility
         public static int CURRENT_LOCATION_ID = 1;
 
         static PointLatLng ourPosition = new PointLatLng(55.8198016524424, 37.3507690429688);
-
+        int cc = 10;
         public static PointLatLng OurPosition
         {
             get { return MapSettings.ourPosition; }
